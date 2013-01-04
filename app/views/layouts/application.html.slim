@@ -1,0 +1,27 @@
+html
+  head
+    title Cosign
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  body
+    #page-wrap
+      #header
+        .wrapper
+          #logo
+            span.hidden
+          #menu
+            = render partial: 'layouts/nav'
+      #body
+        = render partial: 'layouts/side_menu', locals: {side_menu: @side_menu}
+        .wrapper
+          #main-content.basic
+            h1 ACCOUNTING FOR SUSTAINABILITY
+            = render partial: 'layouts/notifications', locals: {notifications: @notifications}
+            #centercol.basic
+              #dataEntryContainer
+                = yield
+          = render partial: 'layouts/suggestions', locals: {suggestions: @suggestions}
+          div style="clear:both"
+  #footer
+    cite Copyright @ RMIT University 2011, 2012, 2013
