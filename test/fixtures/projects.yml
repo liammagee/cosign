@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  description: MyText
+  general_issue: MyText
+  normative_goal: MyText
+  creator_id: 1
+
+two:
+  name: MyString
+  description: MyText
+  general_issue: MyText
+  normative_goal: MyText
+  creator_id: 1
