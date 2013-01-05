@@ -13,7 +13,7 @@ gem 'pg'
 
 gem 'bluecloth'
 gem 'devise'
-gem 'slim'
+gem 'slim-rails'
 
 
 # Gems used only for assets and not required
