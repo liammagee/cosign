@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @indicator_set.name
+p
+  strong Description:
+  = @indicator_set.description
+p
+  strong Source:
+  = @indicator_set.source
+p
+  strong Creator:
+  = @indicator_set.creator_id
+
+= link_to 'Edit', edit_indicator_set_path(@indicator_set)
+'|
+= link_to 'Back', indicator_sets_path

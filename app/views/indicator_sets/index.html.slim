@@ -1,0 +1,25 @@
+h1 Listing indicator_sets
+
+table
+  tr
+    th Name
+    th Description
+    th Source
+    th Creator
+    th
+    th
+    th
+
+  - @indicator_sets.each do |indicator_set|
+    tr
+      td = indicator_set.name
+      td = indicator_set.description
+      td = indicator_set.source
+      td = indicator_set.creator_id
+      td = link_to 'Show', indicator_set
+      td = link_to 'Edit', edit_indicator_set_path(indicator_set)
+      td = link_to 'Destroy', indicator_set, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Indicator set', new_indicator_set_path

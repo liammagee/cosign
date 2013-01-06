@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130105021843) do
+ActiveRecord::Schema.define(:version => 20130106000809) do
+
+  create_table "assessments", :force => true do |t|
+    t.string   "name"
+    t.integer  "project_id"
+    t.integer  "creator_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "indicators", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "code"
+    t.string   "unit_of_measure"
+    t.integer  "indicator_set_id"
+    t.integer  "project_id"
+    t.integer  "creator_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "issues", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "objective"
+    t.integer  "significance"
+    t.integer  "project_id"
+    t.integer  "creator_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "name"

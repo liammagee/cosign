@@ -1,0 +1,31 @@
+h1 Listing indicators
+
+table
+  tr
+    th Name
+    th Description
+    th Code
+    th Unit of measure
+    th Indicator set
+    th Project
+    th Creator
+    th
+    th
+    th
+
+  - @indicators.each do |indicator|
+    tr
+      td = indicator.name
+      td = indicator.description
+      td = indicator.code
+      td = indicator.unit_of_measure
+      td = indicator.indicator_set_id
+      td = indicator.project_id
+      td = indicator.creator_id
+      td = link_to 'Show', indicator
+      td = link_to 'Edit', edit_indicator_path(indicator)
+      td = link_to 'Destroy', indicator, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Indicator', new_indicator_path

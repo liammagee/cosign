@@ -1,0 +1,30 @@
+= form_for @indicator do |f|
+  - if @indicator.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@indicator.errors.count, "error")} prohibited this indicator from being saved:"
+      ul
+        - @indicator.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :code
+    = f.text_field :code
+  .field
+    = f.label :unit_of_measure
+    = f.text_field :unit_of_measure
+  .field
+    = f.label :indicator_set_id
+    = f.number_field :indicator_set_id
+  .field
+    = f.label :project_id
+    = f.number_field :project_id
+  .field
+    = f.label :creator_id
+    = f.number_field :creator_id
+  .actions = f.submit 'Save'

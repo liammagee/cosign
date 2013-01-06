@@ -1,0 +1,23 @@
+h1 Listing subdomains
+
+table
+  tr
+    th Name
+    th Description
+    th Domain
+    th
+    th
+    th
+
+  - @subdomains.each do |subdomain|
+    tr
+      td = subdomain.name
+      td = subdomain.description
+      td = subdomain.domain_id
+      td = link_to 'Show', subdomain
+      td = link_to 'Edit', edit_subdomain_path(subdomain)
+      td = link_to 'Destroy', subdomain, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Subdomain', new_subdomain_path

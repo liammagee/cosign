@@ -14,7 +14,7 @@ p
   = @project.normative_goal
 p
   strong Creator:
-  = @project.creator_id
+  = @project.creator.email
 
 = link_to 'Edit', edit_project_path(@project)
 '|

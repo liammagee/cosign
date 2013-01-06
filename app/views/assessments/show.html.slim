@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @assessment.name
+p
+  strong Project:
+  = @assessment.project_id
+p
+  strong Creator:
+  = @assessment.creator_id
+
+= link_to 'Edit', edit_assessment_path(@assessment)
+'|
+= link_to 'Back', assessments_path

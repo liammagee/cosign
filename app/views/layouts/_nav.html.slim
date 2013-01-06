@@ -6,12 +6,15 @@
           | Logged in as
           strong
             = current_user.email
+        - if session[:project]
+          li
+            = link_to "Project", edit_project_path
+        li
+          = link_to "Projects", projects_path
         li
           = link_to 'Edit profile', edit_user_registration_path
         li
           = link_to "Logout", destroy_user_session_path, method: :delete
-        li
-          = link_to "Projecst", projects_path
       - else
         li
           = link_to "Sign up", new_user_registration_path

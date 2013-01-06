@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @issue.name
+p
+  strong Description:
+  = @issue.description
+p
+  strong Objective:
+  = @issue.objective
+p
+  strong Significance:
+  = @issue.significance
+p
+  strong Project:
+  = @issue.project_id
+p
+  strong Creator:
+  = @issue.creator_id
+
+= link_to 'Edit', edit_issue_path(@issue)
+'|
+= link_to 'Back', issues_path

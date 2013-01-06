@@ -1,0 +1,23 @@
+h1 Listing assessments
+
+table
+  tr
+    th Name
+    th Project
+    th Creator
+    th
+    th
+    th
+
+  - @assessments.each do |assessment|
+    tr
+      td = assessment.name
+      td = assessment.project_id
+      td = assessment.creator_id
+      td = link_to 'Show', assessment
+      td = link_to 'Edit', edit_assessment_path(assessment)
+      td = link_to 'Destroy', assessment, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Assessment', new_assessment_path

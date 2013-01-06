@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @subdomain.name
+p
+  strong Description:
+  = @subdomain.description
+p
+  strong Domain:
+  = @subdomain.domain_id
+
+= link_to 'Edit', edit_subdomain_path(@subdomain)
+'|
+= link_to 'Back', subdomains_path

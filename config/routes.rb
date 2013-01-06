@@ -1,4 +1,22 @@
 Cosign::Application.routes.draw do
+  resources :indicator_sets
+
+
+  resources :subdomains
+
+
+  resources :domains
+
+
+  resources :indicators
+
+
+  resources :issues
+
+
+  resources :assessments
+
+
   resources :projects
 
 

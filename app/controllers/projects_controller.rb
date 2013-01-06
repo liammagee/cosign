@@ -34,16 +34,18 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
-    @project = Project.find(params[:id])
+    session[:project] = @project = Project.find(params[:id])
   end
 
   # POST /projects
   # POST /projects.json
   def create
     @project = Project.new(params[:project])
+    @project.creator = current_user
 
     respond_to do |format|
       if @project.save
+        session[:project] = @project
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render json: @project, status: :created, location: @project }
       else
